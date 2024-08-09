@@ -1,0 +1,503 @@
+/*App Interface*/
+body{
+    background: linear-gradient(#F4512C,#5E1B89);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.App{
+    margin:auto;
+    background-color:#F8FFFE;
+    width:80%;
+    height:95vh;
+    padding:10px;
+    border-radius: 20px;
+    overflow: auto;
+}
+
+.divider{
+    border-top:1px solid #3c3205;
+}
+
+.header-app{
+    display:flex;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.title-app{
+    display:inline-flex;
+    font-family:"Roboto Slab";
+    font-weight:600;
+    font-size:33px;
+    color: #5E1B89;
+    margin-bottom:2px;
+    margin-top: 2px;
+    align-items:center;
+    
+}
+
+.title-app.text{
+    text-decoration-line: underline;
+    text-decoration-color: #5E1B89;
+}
+
+.material-symbols-outlined.title-icon{
+    display:inline-flex;
+    border:none;
+    outline:none;
+    align-items:center;
+    font-size: 1em;
+    padding: 0 10px; 
+}
+
+.buttons-header-app{
+    display:flex;
+    justify-content: space-between;
+}
+
+.material-symbols-outlined.header-button{
+    font-size:1.3em;
+    padding: 0 10px;
+    display:inline-flex;
+    border:none;
+    outline:none;
+    align-items:center;
+}
+
+.button-header{
+    display:inline-flex;
+    justify-content: center;
+    border:none;
+    outline:none;
+    align-items:center;
+    font-size:16px;
+    background: #5E1B89;
+    color:#F8FFFE;
+    box-shadow: 0px 2px 5px 1px rgb(122, 95, 95);
+    border-radius:20px;
+    padding-top:10px;
+    padding-bottom:10px;
+    margin-bottom:0;
+    margin-left:2px;
+    margin-right:10px;
+    overflow:hidden;
+    cursor: pointer;
+    width:200px;
+    transition: box-shadow 300ms ease-in-out;
+}
+
+.button-header.delete-all-btn-false::after{
+    content:"Check All Task";
+}
+
+.button-header.delete-all-btn-true::after{
+    content:"Uncheck All Task";
+}
+
+
+
+.button-header:hover{
+    box-shadow: 0px 2px 10px 5px rgb(122, 95, 95);
+    transition:300ms;
+}
+
+.list-of-task-container{
+    background-color:#ebefef;
+    min-height: 565px;
+    max-height:565px;
+    overflow:auto;
+    margin:5px;
+    border-radius:20px;
+    border-style:inset;
+    border-color:#e2e2e2;
+    padding:10px;
+    width:100%
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background: linear-gradient(#F4512C,#5E1B89);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #F8FFFE;
+    border-radius: 20px;
+    border-color:#5E1B89;
+}
+
+/*Add Button Interface*/
+
+.add-btn-bg{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background-color:rgba(0, 0, 0,0.4);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.add-btn-ui{
+    padding:20px;
+    width:100%;
+    max-width:550px;
+    height:auto;
+    background-color:#F8FFFE;
+    border-radius:20px;
+    animation:drop 1s ease forwards;
+}
+
+@keyframes drop{
+    0%{opacity:0}
+    50%{transform:translateY(6%)}
+    100%{transform:translateY(3%);opacity:1;}
+}
+
+.add-btn-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.add-btn-title{
+    font-size:32px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #5E1B89;
+    padding:0;
+    margin:3px;
+}
+
+.add-btn-close-btn{
+    background: #5E1B89;
+    box-shadow: 0px 2px 5px 1px rgb(122, 95, 95);
+    color:#F8FFFE;
+    border-radius:15px;
+    border:none;
+    outline:none;
+    font-size:15px;
+    cursor:pointer;
+}
+
+.add-btn-close-btn:hover{
+    box-shadow: 0px 2px 10px 5px rgb(122, 95, 95);
+    transition:300ms;
+}
+
+.add-btn-task-div{
+    display:flex;
+    justify-content:left;
+    flex-direction: column;
+    margin-left:10px;
+    margin-right:10px;
+    margin-bottom:20px;
+
+}
+
+.add-btn-task-title{
+    font-size: 18px;
+    color: #F4512C;
+    font-family:'Poppins';
+    font-weight:650;
+
+}
+
+.add-btn-title-input{
+    color:#24032a;
+    background-color:#ebf3f1;
+    border: 2px solid #24032a;
+    border-radius:10px;
+    font-size: 18px;
+    font-family:sans-serif;
+    padding:5px;
+}
+
+.add-btn-description-input{
+    resize:none;
+    color:#24032a;
+    background-color:#ebf3f1;
+    border: 2px solid #24032a;
+    border-radius:10px;
+    font-size: 15px;
+    font-family:sans-serif;
+    padding:5px;
+    height:200px;
+}
+
+.add-btn-task-title.deadline-title{
+    margin-left:13px;
+}
+
+.add-btn-deadline-input{
+    color:#24032a;
+    background-color:#ebf3f1;
+    border: 2px solid #24032a;
+    border-radius:10px;
+    font-size: 15px;
+    font-family:sans-serif;
+    padding:5px;
+    margin-left:10px;
+    margin-bottom:10px;
+}
+
+.add-btn-create-btn-div{
+    display:flex;
+    justify-content:center;
+    margin-top:20px;
+}
+
+.add-btn-create-task-btn{
+    background: #5E1B89;
+    color:#F8FFFE;
+    box-shadow: 0px 2px 5px 1px rgb(122, 95, 95);
+    padding:5px;
+    width:150px;
+    font-size:15px;
+    border-radius:15px;
+    cursor:pointer;
+    border:none;
+    outline:none;
+    display:flex;
+
+}
+
+.add-btn-create-task-btn:hover{
+    box-shadow: 0px 2px 10px 5px rgb(122, 95, 95);
+    transition:300ms;
+}
+
+/*body interface*/
+.body-interface{
+    display:flex;
+    justify-content:center;
+}
+
+.menu-type-tasks{
+    display:flex;
+    flex-direction:column;
+    align-items:normal;
+    padding-top:10px;
+}
+
+.menu-type-task-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    margin-left:-10px;
+    margin-right:15px;
+    border: none;
+    background-color: #e2e2e2;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color:#5E1B89;
+    min-width:210px;
+    height: 60px;
+    font-size:22px;
+}
+
+.menu-type-task-btn:hover {
+    background-color: #9D71BC;
+}
+
+.highlighted {
+    background-color: #5E1B89;
+    color: #F8FFFE;
+    margin:3px;
+    margin-left: -13px;
+    box-shadow: -2px 1px 5px 1px rgb(122, 95, 95);
+}
+
+.lexmeet-logo{
+    margin-top:190px;
+    margin-left:40px;
+    width:60%;
+    mix-blend-mode: multiply;
+}
+
+.lexmeet-title{
+    margin-top:-23px;
+    margin-left:40px;
+    width:72px;
+    mix-blend-mode: multiply;
+    font-family: "Roboto Slab";
+    color:#5E1B89;
+    font-size:32px;
+}
+
+/*List of Task*/
+
+.task-container-div{
+    display:flex;
+    justify-content:space-between;
+    margin: 10px;
+    margin-bottom:15px;
+}
+
+.task-container{
+    min-width:800px;
+    max-width: 1030px;
+    height:123px;
+    display:flex;
+    flex-direction:column;
+    border:none;
+    outline:none;
+    background: linear-gradient(#FF7F4D,#F4512C);
+    color: #F8FFFE;
+    font-size: 15px;
+    padding:10px;
+    padding-left:40px;
+    border-radius:15px;
+    overflow:auto;
+    transition: box-shadow 300ms ease-in-out;
+}
+
+.task-container:hover{
+    box-shadow: 0px 2px 10px 5px rgb(122, 95, 95);
+    transition: 500ms
+}
+
+.block-design-task-container{
+    height:auto;
+    margin:10px;
+    margin-bottom:17px;
+    border:none;
+    outline:none;
+    background: linear-gradient(#FF7F4D,#F4512C);
+    width:15px;
+}
+
+.current-state-task-true{
+    text-decoration:line-through
+}
+
+#task-title{
+    color:#5E1B89;
+    font-family:"Roboto Slab";
+    font-size:43px;
+
+
+}
+
+.check-delete-div{
+   width:120px;
+   height:auto;
+   display:flex;
+   flex-direction:column;
+   justify-content: left;
+   align-content: center;
+   align-items: center;
+   margin:5px;
+   margin-left:10px;
+
+}
+
+.task-check-btn{
+    background-color: #F4512C;
+    height:100px;
+}
+
+.check-task-btn{
+    font-size:15px;
+    border:none;
+    outline:none;
+    padding:5px;
+    margin:5px;
+    background: #5E1B89;
+    color:#F8FFFE;
+    box-shadow: 0px 2px 5px 1px rgb(122, 95, 95);
+    width:100%;
+    cursor: pointer;
+    border-radius:10px;
+    transition: box-shadow 300ms ease-in-out;
+}
+
+.check-task-btn-false{
+    font-size:15px;
+    border:none;
+    outline:none;
+    padding:5px;
+    margin:5px;
+    background: #5E1B89;
+    color:#F8FFFE;
+    box-shadow: 0px 2px 5px 1px rgb(122, 95, 95);
+    width:100%;
+    cursor: pointer;
+    border-radius:10px;
+    content:"Check";
+    transition: box-shadow 300ms ease-in-out;
+}
+
+.check-task-btn-true{
+    font-size:15px;
+    border:none;
+    outline:none;
+    padding:5px;
+    margin:5px;
+    background: #5E1B89;
+    color:#F8FFFE;
+    box-shadow: 0px 2px 5px 1px rgb(122, 95, 95);
+    width:100%;
+    cursor: pointer;
+    border-radius:10px;
+    content: "Uncheck";
+    transition: box-shadow 300ms ease-in-out;
+}
+
+.check-task-btn-true::after{
+    content: "Uncheck";
+}
+
+.check-task-btn-false::after{
+    content: "Check";
+}
+
+.check-task-btn-true:hover{
+    box-shadow: 0px 2px 10px 5px rgb(122, 95, 95);
+    transition:300ms;
+}
+
+.check-task-btn-false:hover{
+    box-shadow: 0px 2px 10px 5px rgb(122, 95, 95);
+    transition:300ms;
+}
+
+
+
+.check-task-btn:hover{
+    box-shadow: 0px 2px 10px 5px rgb(122, 95, 95);
+    transition:300ms;
+}
+
+.task-title{
+    font-size:40px;
+    color:#5E1B89;
+    font-weight:500px;
+    font-family:"Roboto Slab";
+}
+
+/*Delete All button*/
+
+.delete-all-btn-ui{
+    background: #ebf3f1;
+    height:auto;
+    padding:20px;
+    border-radius:20px;
+    display:flex;
+    flex-direction:column;
+    align-content:center;
+}
+
+.do-you-wish-to-delete-all{
+    display:flex;
+    justify-content:center;
+    font-family:"Roboto Slab";
+    color:#5E1B89;
+}
+
+.yes-no-choices{
+    display:flex;
+}
