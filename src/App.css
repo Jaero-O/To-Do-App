@@ -371,7 +371,8 @@ body{
 }
 
 .current-state-task-true{
-    text-decoration:line-through
+    text-decoration:line-through;
+    color: #2b0e3d;
 }
 
 #task-title{
