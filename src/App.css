@@ -372,15 +372,20 @@ body{
 
 .current-state-task-true{
     text-decoration:line-through;
-    color: #2b0e3d;
+    color: #3a1253;
 }
 
-#task-title{
+.current-state-task-false-title{
     color:#5E1B89;
     font-family:"Roboto Slab";
     font-size:43px;
+}
 
-
+.current-state-task-true-title{
+    color:#2d173a;
+    font-family:"Roboto Slab";
+    text-decoration:line-through;
+    font-size:43px;
 }
 
 .check-delete-div{

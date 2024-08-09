@@ -95,6 +95,16 @@ function App() {
     }
   };
 
+  const currentStateTaskTitle = (ifDone) => {
+    let prefix = 'current-state-task';
+
+    if (ifDone) {
+      return prefix + '-true-title';
+    } else {
+      return prefix + '-false-title';
+    }
+  };
+
   const currentStateTask = (ifDone) => {
     let prefix = 'current-state-task';
 
@@ -218,7 +228,7 @@ function App() {
                   setOpenTask(task);
                 }}
               >
-                <text className={currentStateTask(task.ifDone)} id="task-title">
+                <text className={currentStateTaskTitle(task.ifDone)}>
                   {task.taskTitle}
                 </text>
                 <text className={currentStateTask(task.ifDone)}>
